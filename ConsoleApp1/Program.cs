@@ -49,7 +49,7 @@ namespace ConsoleApp1
             Console.WriteLine("cs received buffer:" + str);
         }
 
-        static void RunPassBufferAndReallocMemory()
+        static void RunPassBufferAndReallocMemoryCase()
         {
             byte[] buffer = ASCIIEncoding.ASCII.GetBytes("message from cs");
             Console.WriteLine("cs init buffer:" + Encoding.ASCII.GetString(buffer).TrimEnd('\0'));
@@ -82,7 +82,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             RunPassBufferCase();
-            RunPassBufferAndReallocMemory();
+            RunPassBufferAndReallocMemoryCase();
             RunPassStructCase();
         }
     }
